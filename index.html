@@ -139,16 +139,35 @@
                 </div>
                 <label for="1">1</label>
                 <input type="checkbox" class="string_input" name="1" checked>
-                <label for="1">2</label>
+                <label for="2">2</label>
                 <input type="checkbox" class="string_input" name="2" checked>
-                <label for="1">3</label>
+                <label for="3">3</label>
                 <input type="checkbox" class="string_input" name="3" checked>
-                <label for="1">4</label>
+                <label for="4">4</label>
                 <input type="checkbox" class="string_input" name="4">
-                <label for="1">5</label>
+                <label for="5">5</label>
                 <input type="checkbox" class="string_input" name="5">
-                <label for="1">6</label>
+                <label for="6">6</label>
                 <input type="checkbox" class="string_input" name="6">
+            </div>
+            <div class="section">
+                <div class="label">
+                    Notes to Study:
+                </div>
+                <label for="C">C</label>
+                <input type="checkbox" class="note_input" name="c" checked>
+                <label for="D">D</label>
+                <input type="checkbox" class="note_input" name="d" checked>
+                <label for="E">E</label>
+                <input type="checkbox" class="note_input" name="e" checked>
+                <label for="F">F</label>
+                <input type="checkbox" class="note_input" name="f" checked>
+                <label for="G">G</label>
+                <input type="checkbox" class="note_input" name="g" checked>
+                <label for="A">A</label>
+                <input type="checkbox" class="note_input" name="a" checked>
+                <label for="B">B</label>
+                <input type="checkbox" class="note_input" name="b" checked>
             </div>
         </div>
         <script>
@@ -205,8 +224,15 @@
                 return(strings);
             }
             
-            const getNotes = function() { // all the possible notes on selected strings
-                return(getStrings().map(a => strings[a]).flat())
+            const getNotes = function() { // all the possible active notes on selected strings
+                const active_notes_inputs = document.querySelectorAll(".note_input");
+                const active_notes = [...active_notes_inputs].reduce((a, b, i) => {return(b.checked ? [...a, b.name] : a)}, []);
+                let notes = getStrings().map(a => strings[a]).flat()
+                notes = notes.filter(note => {
+                    const base_note = note.replace(/[0-9]/g, ''); 
+                    return active_notes.includes(base_note);
+                });
+                return(notes)
             }
 
             const getNewNote = function(p, notes) {
