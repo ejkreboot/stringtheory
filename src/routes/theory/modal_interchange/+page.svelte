@@ -140,41 +140,47 @@
         padding-bottom: 20px;
       }
 
+      @media print {
+        .no-print {
+          display: none;
+        }
+      }
+
 </style>
 
 <body>
-  <h1>Modal Interchange</h1>
+  <div class=no-print>
+    <h1>Modal Interchange</h1>
+    <h3>Theory</h3>
+    <p>Recall that the chords in a major scale are:</p>
+    <pre style="font: Courier;">
+      I ii  iii IV V vi VII°
+    </pre>
+    <p>The chords of the parallel minor are:</p>
+    <pre style="font: Courier;">
+      i II° III♭ iv V VI♭ VII♭
+    </pre>
+    <p>Of which the iv, VI♭, and VII♭ chords are among the most commonly used.</p>
 
-  <h3>Theory</h3>
-  <p>Recall that the chords in a major scale are:</p>
-  <pre style="font: Courier;">
-    I ii  iii IV V vi VII°
-  </pre>
-  <p>The chords of the parallel minor are:</p>
-  <pre style="font: Courier;">
-    i II° III♭ iv V VI♭ VII♭
-  </pre>
-  <p>Of which the iv, VI♭, and VII♭ chords are among the most commonly used.</p>
+    <h3>Example</h3>
+    <p>A very common chord progression is I - IV - V (sometimes with the minor 6th thrown in for good measure). 
+      The corresponding triads for the specified key are given below. Select a different key to see triads 
+      for that key.
+    </p>
 
-  <h3>Example</h3>
-  <p>A very common chord progression is I - IV - V (sometimes with the minor 6th thrown in for good measure). 
-    The corresponding triads for the specified key are given below. Select a different key to see triads 
-    for that key.
-  </p>
+    <label for="key-select">Choose a key:</label>
+    <select id="key-select" bind:value={selectedKey} style="width: 50px;">
+      {#each keys as { label, value }}
+        <option value={value}>{label}</option>
+      {/each}
+    </select>
 
-  <label for="key-select">Choose a key:</label>
-  <select id="key-select" bind:value={selectedKey} style="width: 50px;">
-    {#each keys as { label, value }}
-      <option value={value}>{label}</option>
-    {/each}
-  </select>
-
-  <label for="strings-select">Choose strings:</label>
-  <select id="strings-select" bind:value={selectedStrings} style="width: 150px;">
-    <option value="strings_4_5_6">Strings 4, 5, 6</option>
-    <option value="strings_5_6_7">Strings 5, 6, 7</option>
-  </select>
-
+    <label for="strings-select">Choose strings:</label>
+    <select id="strings-select" bind:value={selectedStrings} style="width: 150px;">
+      <option value="strings_4_5_6">Strings 4, 5, 6</option>
+      <option value="strings_5_6_7">Strings 5, 6, 7</option>
+    </select>
+  </div>
   <div id="major_triads">
     {#each major_triads as triad}
     <div class="triad">
