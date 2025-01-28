@@ -1,6 +1,3 @@
-<script>
-    // Add any functionality you might need here
-  </script>
   
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
@@ -82,7 +79,7 @@
   
   <body>
   <header>
-    Guitar Tools
+    String Theory
   </header>
   
   <main>
@@ -108,6 +105,6 @@
   </main>
   
   <footer>
-    &copy; {new Date().getFullYear()} Guitar Tools | Created with care
+    &copy; {new Date().getFullYear()} String Theory | Created with care
   </footer>
 </body>
