@@ -8,6 +8,15 @@
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 		
+			body {
+				font-family: 'Libre Baskerville', serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f8f9fa; /* Light gray background */
+				color: #333; /* Dark text for good contrast */
+				min-height: 100vh;
+			}
+			
 			.chord {
 				float: left;
 				font-family: "Poiret One";
@@ -36,9 +45,21 @@
 				font-size: 25px;
 				color: #777;
 			}
+
+			footer {
+				text-align: center;
+				margin-top: 3rem;
+				font-size: 0.9rem;
+				color: #666;
+				padding-bottom: 20px;
+			}
 		</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
+		<footer>
+			&copy; 2025 <a href="/">String Theory</a> | Created with care
+		</footer>		
 	</body>
+	
 </html>

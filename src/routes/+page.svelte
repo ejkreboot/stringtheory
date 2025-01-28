@@ -1,15 +1,7 @@
   
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
-  
-    body {
-      font-family: 'Libre Baskerville', serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa; /* Light gray background */
-      color: #333; /* Dark text for good contrast */
-      min-height: 100vh;
-    }
+
   
     header {
       background-color: #333;
@@ -69,15 +61,8 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
   
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
   </style>
   
-  <body>
   <header>
     String Theory
   </header>
@@ -103,8 +88,3 @@
       </div>
     </section>
   </main>
-  
-  <footer>
-    &copy; {new Date().getFullYear()} String Theory | Created with care
-  </footer>
-</body>

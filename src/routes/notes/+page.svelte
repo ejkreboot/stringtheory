@@ -128,7 +128,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-    body {
+    .container {
         width: 600px;
         margin: auto;
         padding-top: 50px;
@@ -222,7 +222,7 @@
     }
 
 </style>    
-<body>    
+<div class=container>
     <div class="blue center title">
         Guitar Note Trainer
     </div>
@@ -300,4 +300,4 @@
             <input type="checkbox" class="note_input" name="b" checked>
         </div>
     </div>
-</body>
+</div>    
