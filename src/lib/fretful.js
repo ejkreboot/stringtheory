@@ -54,6 +54,18 @@ export const notes_flats = [
  *  Triplets on top three and 'middle' three (2-4) strings
  */
 export const triplets = {
+    major_quatrads: 
+        [
+            "1:e5 2:c5 3:g4 4:e4",
+            "1:g4 2:e4 3:c4 4:g3",
+            "1:c5 2:g4 3:e4 4:c4"
+        ],
+    minor_quatrads: 
+        [
+            "1:eb5 2:c5 3:g4 4:eb5",
+            "1:g4 2:eb4 3:c4 4:g3",
+            "1:c5 2:g4 3:eb4 4:c5"
+        ],
     major_triplets: {
         top: [
             "1:e5 2:c5 3:g4",

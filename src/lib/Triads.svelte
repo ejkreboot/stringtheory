@@ -6,8 +6,19 @@
     export let notes = ""; // Notes for the triad as a space-separated string, e.g., "C E G"
   
     let fretboardElement; // Reference to the DOM element for the fretboard
-    let fretboardInstance;
-  
+    let overlayFillColors;
+
+    if(notes.split(" ").length == 9) {
+      overlayFillColors = ["#faa336", "#faa336", "#faa336", 
+                                "#80cbe0", "#80cbe0","#80cbe0",
+                                "#f95e2e", "#f95e2e", "#f95e2e"]
+    } else {
+      overlayFillColors = ["#faa336", "#faa336", "#faa336", "#faa336", 
+                                "#80cbe0", "#80cbe0","#80cbe0", "#80cbe0",
+                                "#f95e2e", "#f95e2e", "#f95e2e", "#f95e2e"]
+
+    }
+
     let id = "fb_" + Math.floor(10000 * Math.random());
     onMount(() => {
       const config = {
@@ -20,9 +31,7 @@
         fillColors: "#ddd",
         colors: "#ccc",
         radius: 7,
-        overlayFillColors: ["#faa336", "#faa336", "#faa336", 
-                            "#80cbe0", "#80cbe0","#80cbe0",
-                            "#f95e2e", "#f95e2e", "#f95e2e"],
+        overlayFillColors,
         overlayNameColors: "#000"
       }
       fretboardElement = fretboards.Fretboard(config);

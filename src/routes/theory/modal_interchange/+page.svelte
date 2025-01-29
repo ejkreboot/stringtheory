@@ -9,12 +9,14 @@
 
   const major_triplets = {
     strings_4_5_6: fretful.triplets.major_triplets.top,
-    strings_5_6_7: fretful.triplets.major_triplets.middle
+    strings_5_6_7: fretful.triplets.major_triplets.middle,
+    quatrads: fretful.triplets.major_quatrads
   };
 
   const minor_triplets = {
     strings_4_5_6: fretful.triplets.minor_triplets.top,
-    strings_5_6_7: fretful.triplets.minor_triplets.middle
+    strings_5_6_7: fretful.triplets.minor_triplets.middle,
+    quatrads: fretful.triplets.minor_quatrads
   };
 
   const keys = [
@@ -179,6 +181,7 @@
     <select id="strings-select" bind:value={selectedStrings} style="width: 150px;">
       <option value="strings_4_5_6">Strings 4, 5, 6</option>
       <option value="strings_5_6_7">Strings 5, 6, 7</option>
+      <option value="quatrads">Quatrads</option>
     </select>
   </div>
   <div id="major_triads">
