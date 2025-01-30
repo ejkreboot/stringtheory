@@ -30,9 +30,12 @@
         nameColors: "#777",
         fillColors: "#ddd",
         colors: "#ccc",
+        stringThickness: 12,
         radius: 7,
         overlayFillColors,
-        overlayNameColors: "#000"
+        overlayNameColors: "#000",
+        dotColor: "black",
+        dotRadius: 5
       }
       fretboardElement = fretboards.Fretboard(config);
       fretboardElement.add(scale);
