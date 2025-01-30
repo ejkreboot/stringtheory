@@ -50,10 +50,9 @@ class JustANote {
     // Add accidental if present
     if (note.includes("#")) {
       staveNote.addModifier(new Accidental("#"), 0);
-    } else if (note.includes("b")) {
+    } else if (note.match(".+b")) {
       staveNote.addModifier(new Accidental("b"), 0);
     }
-
     // Create a voice and formatter
     const voice = new Voice({ num_beats: 1, beat_value: 4 });
     voice.addTickables([staveNote]);
