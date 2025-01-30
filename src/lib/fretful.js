@@ -62,9 +62,9 @@ export const triplets = {
         ],
     minor_quatrads: 
         [
-            "1:eb5 2:c5 3:g4 4:eb5",
+            "1:eb5 2:c5 3:g4 4:eb4",
             "1:g4 2:eb4 3:c4 4:g3",
-            "1:c5 2:g4 3:eb4 4:c5"
+            "1:c5 2:g4 3:eb4 4:c4"
         ],
     major_triplets: {
         top: [

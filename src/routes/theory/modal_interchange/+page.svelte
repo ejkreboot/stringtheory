@@ -9,13 +9,13 @@
 
   const major_triplets = {
     strings_4_5_6: fretful.triplets.major_triplets.top,
-    strings_5_6_7: fretful.triplets.major_triplets.middle,
+    strings_3_4_5: fretful.triplets.major_triplets.middle,
     quatrads: fretful.triplets.major_quatrads
   };
 
   const minor_triplets = {
     strings_4_5_6: fretful.triplets.minor_triplets.top,
-    strings_5_6_7: fretful.triplets.minor_triplets.middle,
+    strings_3_4_5: fretful.triplets.minor_triplets.middle,
     quatrads: fretful.triplets.minor_quatrads
   };
 
@@ -76,8 +76,14 @@
       ];
       modal_interchange_triads = [
         {
+          label: "Flat Third",
+          chord: getChordName(selectedKey, 3),
+          scale: selectedKeyName + " major",
+          notes: fretful.transpose_triplets(major_triplets[selectedStrings], selectedKey + 3).join(" ")
+        },
+        {
           label: "Minor Fourth",
-          chord: getChordName(selectedKey, 5),
+          chord: getChordName(selectedKey, 5) + " minor",
           scale: selectedKeyName + " major",
           notes: fretful.transpose_triplets(minor_triplets[selectedStrings], selectedKey + 5).join(" ")
         },
@@ -117,8 +123,8 @@
       }
 
       p {
-        padding-top: 15px;
-        padding-bottom: 5px;
+        padding-top: 0px;
+        padding-bottom: 10px;
         color:rgb(45, 118, 166);
         line-height: 28px;
       }
@@ -146,6 +152,7 @@
         .no-print {
           display: none;
         }
+        .page-break { page-break-before: always; } 
       }
 
 </style>
@@ -162,11 +169,16 @@
     <pre style="font: Courier;">
       i II° III♭ iv V VI♭ VII♭
     </pre>
-    <p>Of which the iv, VI♭, and VII♭ chords are among the most commonly used.</p>
+    <p>Chords from the parallel minor can be "borrowed" to add emotion, tension, and movement 
+       to your music. They can be used as "passing" chords to transition from one chord in  
+       the song's key to another. Note that this results in notes being used that are 
+       not in the key (as opposed to the notes in the relative minor scale).</p>
+
+    <p>The III♭, iv, VI♭, and VII♭ chords from the parallel minor are among the most commonly used.</p>
 
     <h3>Example</h3>
-    <p>A very common chord progression is I - IV - V (sometimes with the minor 6th thrown in for good measure). 
-      The corresponding triads for the specified key are given below. Select a different key to see triads 
+    <p>A very common chord progression are I-V-vi-IV (sometimes starting in the "middle", such as vi–IV–I–V).
+      The corresponding triads (or quatrads if selected) for the specified key are given below. Select a different key to see triads 
       for that key.
     </p>
 
@@ -179,11 +191,12 @@
 
     <label for="strings-select">Choose strings:</label>
     <select id="strings-select" bind:value={selectedStrings} style="width: 150px;">
-      <option value="strings_4_5_6">Strings 4, 5, 6</option>
-      <option value="strings_5_6_7">Strings 5, 6, 7</option>
+      <option value="strings_4_5_6" selected>Strings 4, 5, 6</option>
+      <option value="strings_3_4_5">Strings 3, 4, 5</option>
       <option value="quatrads">Quatrads</option>
     </select>
   </div>
+  <p>Common triads (or quatrads) in the key of {chromaticScale[selectedKey]}:</p>
   <div id="major_triads">
     {#each major_triads as triad}
     <div class="triad">
@@ -195,7 +208,8 @@
     {/each}
   </div>
 
-  <p>The common modal interchange triplets for this key are given below.</p>
+  <p class="page-break">Common modal interchange triads (or quatrads) borrowed from
+  {chromaticScale[selectedKey]} minor:</p>
   <div id="modal_interchange">
     {#each modal_interchange_triads as triad}
       <div class="triad">
