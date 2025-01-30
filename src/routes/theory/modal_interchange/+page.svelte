@@ -148,17 +148,31 @@
         padding-bottom: 20px;
       }
 
+      .only-print {
+        display: none;
+      }
+
       @media print {
+        @page {
+          margin-left: 1in;
+          margin-right: 1in;
+        }
+
         .no-print {
           display: none;
         }
+
+        .only-print {
+          display: inline;
+        }
+
         .page-break { page-break-before: always; } 
       }
 
 </style>
 
 <body>
-  <div class=no-print>
+  <div>
     <h1>Modal Interchange</h1>
     <h3>Theory</h3>
     <p>Recall that the chords in a major scale are:</p>
@@ -178,17 +192,17 @@
 
     <h3>Example</h3>
     <p>A very common chord progression are I-V-vi-IV (sometimes starting in the "middle", such as vi–IV–I–V).
-      The corresponding triads (or quatrads if selected) for the specified key are given below. Select a different key to see triads 
-      for that key.
+      The corresponding {selectedStrings == "quatrads" ? "quatrads" : "triads"} for the specified key are <span class="only-print">shown on the next page.</span>
+      <span class="no-print">shown below. Select a different key to see triads for that key.</span>
     </p>
 
+    <div class="no-print">
     <label for="key-select">Choose a key:</label>
     <select id="key-select" bind:value={selectedKey} style="width: 50px;">
       {#each keys as { label, value }}
         <option value={value}>{label}</option>
       {/each}
     </select>
-
     <label for="strings-select">Choose strings:</label>
     <select id="strings-select" bind:value={selectedStrings} style="width: 150px;">
       <option value="strings_4_5_6" selected>Strings 4, 5, 6</option>
@@ -196,7 +210,9 @@
       <option value="quatrads">Quatrads</option>
     </select>
   </div>
-  <p>Common triads (or quatrads) in the key of {chromaticScale[selectedKey]}:</p>
+  <p class="page-break">Common {selectedStrings == "quatrads" ? "quatrads" : "triads"} in the key of
+  {chromaticScale[selectedKey]}:</p>
+  
   <div id="major_triads">
     {#each major_triads as triad}
     <div class="triad">
@@ -207,8 +223,9 @@
       </div>
     {/each}
   </div>
+  <p class="only-print">Modal interchange {selectedStrings == "quatrads" ? "quatrads" : "triads"} are shown on the next page.</p>
 
-  <p class="page-break">Common modal interchange triads (or quatrads) borrowed from
+  <p class="page-break">Common modal interchange {selectedStrings == "quatrads" ? "quatrads" : "triads"} borrowed from
   {chromaticScale[selectedKey]} minor:</p>
   <div id="modal_interchange">
     {#each modal_interchange_triads as triad}

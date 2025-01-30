@@ -23,7 +23,7 @@
     onMount(() => {
       const config = {
         frets: 15,
-        fretWidth: 40,
+        fretWidth: 38,
         fretHeight: 18,
         where: "#" + id,
         showNames: true,
