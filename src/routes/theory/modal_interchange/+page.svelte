@@ -183,15 +183,18 @@
     <pre style="font: Courier;">
       i II° III♭ iv V VI♭ VII♭
     </pre>
-    <p>Chords from the parallel minor can be "borrowed" to add emotion, tension, and movement 
-       to your music. They can be used as "passing" chords to transition from one chord in  
-       the song's key to another. Note that this results in notes being used that are 
-       not in the key (as opposed to the notes in the relative minor scale).</p>
+    <p>Chords from the parallel minor can be "borrowed" to add emotion, tension, and variety 
+       to your music (without being so far removed from the key of the piece as to run afoul 
+       of our brain's culturally ingrained expectations for what is musically pleasing). 
+       They can be used as one of the chords in a song's predominant chord progression, or 
+       can be used in distinct sections of a song, such as a bridge. 
+       Note that this results in notes being used that are not in the key (as opposed to the 
+       notes in the relative minor scale).</p>
 
     <p>The III♭, iv, VI♭, and VII♭ chords from the parallel minor are among the most commonly used.</p>
 
     <h3>Example</h3>
-    <p>A very common chord progression are I-V-vi-IV (sometimes starting in the "middle", such as vi–IV–I–V).
+    <p>A very common chord progression is I-V-vi-IV (sometimes starting in the "middle", such as vi–IV–I–V).
       The corresponding {selectedStrings == "quatrads" ? "quatrads" : "triads"} for the specified key are <span class="only-print">shown on the next page.</span>
       <span class="no-print">shown below. Select a different key to see triads for that key.</span>
     </p>
