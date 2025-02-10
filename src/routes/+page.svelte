@@ -32,7 +32,7 @@
     }
   
     main {
-      max-width: 800px;
+      max-width: 700px;
       margin: 2rem auto;
       padding: 1rem;
     }
@@ -60,7 +60,7 @@
   
     .link-card {
       display: block;
-      min-width: 100%;
+      min-width: 80%;
       margin-top: 10px;
       padding: 1rem;
       text-align: center;
@@ -78,6 +78,12 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
   
+    @media (max-width:750px)  {
+    body, main {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
   </style>
   
   <header>

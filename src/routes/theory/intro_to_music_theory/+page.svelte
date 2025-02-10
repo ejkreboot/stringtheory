@@ -310,6 +310,14 @@
     display: none;
   }
 
+  @media (max-width:750px)  {
+    body{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+
   @media print {
     @page {
       margin-left: 1in;
