@@ -92,10 +92,10 @@
     <h3>Chords</h3>
 
     <p>
-      Chords are three or four notes taken from a particular scale played
+      Chords are three or four (or even more) notes taken from a particular scale played
       together. The "root" of the chord is the note on which the chord is built
       and the note that give the chord its name. (For example, the root of a C
-      major chord is C). Common chords include
+      major chord is C). Common chords include:
     </p>
     <ul>
       <li>Major chord: Root, major 3rd, 5th</li>
@@ -134,10 +134,11 @@
 
     <p>
       Finally, the notation can be confusing. In general, when we talk about "a
-      7th chord" (e.g. C7), we mean the dominant seventh. If a major or minor
-      7th is desired, that will be specified explicitly (Cmaj7 or Cmin7). Just
-      to keep us on our toes, sometimes Cmaj7 is notated as CΔ, CΔ7, or CM7. And
-      Cmin7 might be notated as Cm7.
+      7th chord" (e.g. C7), we mean the dominant seventh (major triad plus the minor 
+      7th). If a major 7th (major triad plus the major 7th) or minor
+      7th (minor triad plus the minor 7th) is desired, that will be specified 
+      explicitly (Cmaj7 or Cmin7). Just to keep us on our toes, sometimes Cmaj7 
+      is notated as CΔ, CΔ7, or CM7. And Cmin7 might be notated as Cm7.
     </p>
     <div class="callout callout-question">
       <p><Question question="What is a minor third?"
@@ -202,7 +203,7 @@
     </pre>
     <p>We can write this in terms of "degrees" of the scale:</p>
     <pre>
-      I   ii  iii IV  V   vi  VII°
+      I   ii  iii IV  V   vi  vii°
     </pre>
 
     <p>
