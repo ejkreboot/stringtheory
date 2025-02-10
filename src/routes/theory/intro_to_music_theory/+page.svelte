@@ -247,7 +247,7 @@
       quick math, or by using a version of the circle of fifths that calls this information
       out for you, such as the one below.
     </p>
-    <center><img width="100%" alt="Circle Of Fifths" src="/images/circle_of_fifths@0.5x.webp"></center>
+    <center><img width="90%" alt="Circle Of Fifths" src="/images/circle_of_fifths@0.5x.webp"></center>
     <p>
       If you understand how the circle of fifths works, you can recreate it (in your head 
       or on paper) whenever you need to figure out the "key signature" (the sharps or flats 
@@ -259,12 +259,21 @@
       printout handy in the mean time).
     </p>
     <p>
-      In the version above, the bolded major keys (F,C, G, D, A ) and their corresponding 
+      In the version above, the bolded major keys (F, C, G, D, A ) and their corresponding 
       relative minor keys account for roughly half of popular music. (At least according to 
       a 2015 analysis of 30 million songs in the spotify database by Spotify "Data Storyteller"
       and musician Eliot Van Buskirk. His 2015 blog post has since been taken down, but the
       song key pie chart he constructed is available <a href="/images/buskirk_piechart.png">here</a>.)
     </p>
+    <div class="callout callout-question">
+      <p><Question question="You decide you want to write a song in the key of A. Use the circle of fifths 
+                             to determine What are the I, IV, V, and vi chords."
+                answer="D major, E major, and F# minor."></Question>
+      </p>
+      <p><Question question="How many sharps or flats are in the key of A major, and what are they?"
+            answer="Three: F, C, and G."></Question>
+      </p>
+    </div>
   </div>
 </body>
 
