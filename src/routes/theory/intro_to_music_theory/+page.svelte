@@ -135,7 +135,7 @@
     <p>
       Finally, the notation can be confusing. In general, when we talk about "a
       7th chord" (e.g. C7), we mean the dominant seventh (major triad plus the minor 
-      7th). If a major 7th (major triad plus the major 7th) or minor
+      7th, as indicated above). If a major 7th (major triad plus the major 7th) or minor
       7th (minor triad plus the minor 7th) is desired, that will be specified 
       explicitly (Cmaj7 or Cmin7). Just to keep us on our toes, sometimes Cmaj7 
       is notated as CΔ, CΔ7, or CM7. And Cmin7 might be notated as Cm7.

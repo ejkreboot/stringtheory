@@ -175,9 +175,9 @@
   <div>
     <h1>Modal Interchange</h1>
     <h3>Theory</h3>
-    <p>Recall that the chords in a major scale are:</p>
+    <p><a href="/theory/intro_to_music_theory">Recall</a>that the chords in a major scale are:</p>
     <pre style="font: Courier;">
-      I ii  iii IV V vi VII°
+      I ii  iii IV V vi vii°
     </pre>
     <p>The chords of the parallel minor are:</p>
     <pre style="font: Courier;">
